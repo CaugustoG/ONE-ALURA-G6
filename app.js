@@ -1,88 +1,36 @@
+// Desafío 1 
+// Cambia el contenido de la etiqueta h1 con document.querySelector y asigna el siguiente texto: "Hora del Desafío".
 
-let numeroMaximo = 100;
-let numeroSecreto = Math.floor(Math.random()*numeroMaximo) +1 ;
-let numeroUsuario = 0;
-let intentos = 1;
-//let palabraVeces = 'vez';
-let maximosIntentos = numeroMaximo / 10 ;
+let titulo = document.querySelector ("h1");
+titulo.innerHTML = "hora del desafío";
 
-console.log (numeroSecreto);
+// Crea una función que muestre en la consola el mensaje "El botón fue clicado" siempre que se presione el botón "Console".
 
-while (numeroUsuario != numeroSecreto) {
-    numeroUsuario = parseInt(prompt (`Me indicas un número por favor entre 1 y ${numeroMaximo}, tienes ${maximosIntentos} intentos para acertar`));
-
-    console.log (numeroUsuario);
-    if (numeroUsuario == numeroSecreto) {
-        alert (`Acertaste, el número es: ${numeroUsuario}, lo hicite en ${intentos} ${intentos == 1 ? 'intento' : 'intentos' }`);
-    } else {
-        if (numeroUsuario > numeroSecreto) {
-            alert ('el numero secreto es menor');
-        }else {
-            alert ('el numero secreto es mayo');
-        }
-        //intentos = intentos + 1;
-        //intento += 1;
-        intentos ++ ;
-        //palabraVeces = 'veces';
-        if (intentos > maximosIntentos) {
-            alert (`llegaste al número máximo de ${maximosIntentos} intentos,`);
-            break;
-        }
-    }
-    
+function botonConsola () {
+    console.log ("el botón fue clickeado");
 }
 
+// Crea una función que se ejecute cuando se haga clic en el botón "prompt", preguntando el nombre de una ciudad de Brasil. Luego, muestra una alerta con el mensaje concatenando la respuesta con el texto: "Estuve en {ciudad} y me acordé de ti".
 
-/*
-alert ('Bienvenida y bienvenido a nuestro sitio web'); //correcto
-let nombre = luna; //incorrecto, falto colocar '' al al palabra luna
-let edad = 25; //correcto
-let numeroDeVentas = 50; //correcto
-let saldoDisponible = 1000; //correcto
-
-alert ('error!, completa todos los campos'); //correcto
-let mensajeDeError = prompt('¡Error!, completa todos los campos'); //incorrecto, al asignar el valor de la variable, no se coloca prompt, tampoco parentesis.
-Alert (mensajeDeError); //correcto
-prompt ('¿cual es su nombre?'); //Incorrecto, la maners correcta es: let nombre = prompt ("digite su nombre");
-console.log (nombre); // innecesario, no se esta pidiendo esta información en el enunciado
-prompt ('¿cual es su edad?'); //Incorrecto, la maners correcta es: let edad = prompt ("digite su edad");
-console.log (edad); // innecesario, no se esta pidiendo esta información en el enunciado
-
-if (edad >= 18) {
-    Alert('¡puedes obtener tu licencia de consuccion');
-} // correcto
-
-
-javascript
-alert('Bienvenido al juego del número secreto');
-let intento = prompt('Elige un número entre 1 y 10');
-
-let numeroSecreto = 4;
-
-console.log(intento  == numeroSecreto);
-if (intento  == numeroSecreto) {
-    alert('Acertaste');
-} else {
-    alert('El número secreto era ' + numeroSecreto);
+function botonPrompt (){
+let ciudad = prompt ("Escribe una iudad de brasil");
+    alert (`Estuve en ${ciudad}, y me acorde de tí`);
 }
 
+// Crea una función que muestre una alerta con el mensaje: "Yo amo JS" siempre que se presione el botón "Alerta".
 
-alert('Bienvenido al juego del número secreto');
-
-// Agrega un console.log para verificar el valor de "intento" después de la entrada del usuario
-let intento = prompt('Elige un número entre 1 y 10');
-console.log('Valor de intento:', intento);
-
-let numeroSecreto = 4;
-
-// Agrega un console.log para verificar la comparación entre "intento" y "numeroSecreto"
-console.log('Resultado de la comparación:', intento == numeroSecreto);
-
-if (intento == numeroSecreto) {
-    alert('Adivinaste');
-} else {
-    // Agrega un console.log para verificar el valor de "numeroSecreto" cuando el jugador se equivoca
-    console.log('Valor del número secreto:', numeroSecreto);
-    alert('El número secreto era ' + numeroSecreto);
+function botonAlerta (){
+    alert ("Yo amo JS");
 }
-*/
+
+// Al hacer clic en el botón "suma", pide 2 números y muestra el resultado de la suma en una alerta.
+
+function botonSuma (){
+
+    let numero1 = parseInt (prompt ("Escribe un número"));
+    let numero2 = parseInt (prompt ("Escrie otro número"));
+    let resultado = numero1 + numero2;
+
+    alert (`Los números elegidos suman ${resultado}`);
+
+}
